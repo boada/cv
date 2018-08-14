@@ -1,115 +1,110 @@
 \documentclass[margin,line, 11pt]{res}
 
+\topmargin=-0.5in    % Make letterhead start about 1 inch from top of page
+\textheight=10in  % text height can be bigger for a longer letter
 \oddsidemargin -.5in
-\evensidemargin -.5in
+%\evensidemargin -.5in
 \textwidth=6.0in
 \itemsep=0in
 \parsep=0in
+
 \nofiles
 
 % if using pdflatex:
 \setlength{\pdfpagewidth}{\paperwidth}
-\setlength{\pdfpageheight}{\paperheight} 
+\setlength{\pdfpageheight}{\paperheight}
 
 \newenvironment{list1}{
   \begin{list}{\ding{113}}{%
       \setlength{\itemsep}{0in}
       \setlength{\parsep}{0in} \setlength{\parskip}{0in}
-      \setlength{\topsep}{0in} \setlength{\partopsep}{0in} 
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
       \setlength{\leftmargin}{0.17in}}}{\end{list}}
 \newenvironment{list2}{
   \begin{list}{$\bullet$}{%
       \setlength{\itemsep}{0in}
       \setlength{\parsep}{0in} \setlength{\parskip}{0in}
-      \setlength{\topsep}{0in} \setlength{\partopsep}{0in} 
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
       \setlength{\leftmargin}{0.2in}}}{\end{list}}
+
+\renewcommand{\familydefault}{\sfdefault}
+%\usepackage[sfdefault, light, condensed]{roboto}
+\usepackage[light,condensed]{iwona}
+\usepackage[T1]{fontenc}
+\usepackage[colorlinks=false,urlcolor=magenta,citecolor=blue,linkcolor=blue]{hyperref}
 
 \begin{document}
 
-\name{Steven Boada, Ph.D\vspace*{.1in}}
+\name{{\huge\bf Steven Boada, Ph.D}\vspace*{.1in}}
 
 \begin{resume}
 \section{\sc Contact Information}
 \vspace{.05in}
 \begin{tabular}{@{}p{3in}p{3in}}
-Department of Physics and Astronomy & {\it Phone:}  +1 (615) 200-0119 \\            
-136 Frelinghuysen Rd   & {\it E-mail:}  boada@physics.rutgers.edu \\         
-Rutgers University & {\it WWW:} http://boada.github.io \\       
-Piscataway, NJ 08854  & \\     
+Department of Physics and Astronomy & {\it Phone:}  +1 (615) 200-0119 \\
+136 Frelinghuysen Rd   & {\it E-mail:}  boada@physics.rutgers.edu \\
+Rutgers University & {\it WWW:} http://boada.github.io \\
+Piscataway, NJ 08854  & \\
 \end{tabular}
 
 \section{\sc Research Interests}
 Observation Cosmology, Large-area Sky Surveys (e.g., DES, LSST, SDSS, ACT, SPT), Galaxy Clusters, High Performance Computing (HPC), Galaxy Evolution, Interacting Galaxies and Morphology.
 \vspace*{-3mm}
 
-\section{\sc Education}
+\section{Education}
 \textbf{Texas A\&M University}, College Station, Texas USA\\
-%{\em Department of Physics and Astronomy} 
-\vspace*{-.1in}
-\begin{list1}
-    \item[]Ph.D., Physics (Astronomy focus), August, 2016
-    \begin{list2}
-        %\vspace*{-.15in}
-        \item Dissertation Title: ``Measuring the Scatter in the Cluster Optical Richness--Mass\\ Relation with Machine Learning'' 
-        \item Advisor: Dr. Casey Papovich
-    \end{list2}
-\end{list1}
-\vspace*{1mm}
+\vspace*{-4mm}
+\begin{list2}
+	\item Ph.D, Physics (astronomy focus), August, 2016
+\end{list2}
+\vspace*{-4mm}
 
 \textbf{The University of Tennessee}, Knoxville, Tennessee USA\\
-%{\em Department of Physics and Astronomy}
-\vspace*{-.1in}
-\begin{list1}
-    \item[] M.S., Physics (Computational Astrophysics),  August, 2009
+\vspace*{-4mm}
+\begin{list2}
+	\item M.S., Physics (astronomy focus),  August, 2009
+	\item B.S., Physics,  May, 2007
+\end{list2}
+\vspace*{-2.5mm}
+
+\section{Professional \newline Experience}
+\textbf{Dept. of Physics and Astronomy, Rutgers University}, New Brunswick, New Jersey USA \newline
+\textit{Postdoctoral Research Associate} \hfill \textbf{September, 2016 - Present}\newline
     \begin{list2}
-        \vspace*{.05in}
-        \item Thesis Title: ``An Automated Approach to the Study and Classification of Colliding and Interacting Galaxies''
-        \item Advisor: Dr. Michael Guidry
+    	\vspace*{-5mm}
+    	\item Designed and built massive, parallelized, Python pipelines to process and analyze TBs of astronomical imaging; producing calibrated, standardized data catalogs and rigorous results.
+    	\item Coordinated a team of 4, including both senior scientists and graduate students, to perform quality control tasks; deliver science products; and produce peer-reviewed publications.
+    	\item Contributed to open source Python projects including: \href{https://github.com/boada/photometrypipeline}{\sc{photometrypipeline}}, \href{http://astlib.sourceforge.net/}{\sc{astLib}}, and \href{https://github.com/boada/easyGalaxy}{\sc{easyGalaxy}}.
     \end{list2}
-\end{list1}
-\vspace*{1mm}
+\vspace*{-3mm}
 
-{\bf The University of Tennessee}, Knoxville, Tennessee USA\\
-%{\em Department of Physics and Astronomy} 
-\vspace*{-.1in}
-\begin{list1}
-    \item[] B.S., Physics,  May, 2007
-\end{list1}
-\vspace*{1mm}
+\textbf{Texas A\&M University}, College Station, Texas USA\newline
+\textit{Ph.D Candidate} \hfill \textbf{August, 2010 - 2016}\newline
+    \begin{list2}
+    	\vspace*{-5mm}
+      \item Proved simulated results for an upcoming astronomical survey could be improved, by a factor of $\sim3$, over in-house statistical methods by using Random Forest regression. Implemented these ML methods and produced improved results in a pilot survey of the real sky and under real-world conditions.
+    	\item Collaborated with group members both in person, and through collaborative tools (e.g., GitHub, SVN).
+    	\item Presented scientific results in high-impact, peer reviewed journals and at international conferences.
+    \end{list2}
+\vspace*{-3mm}
 
-\section{\sc Professional Experience}
-\textbf{Rutgers University}, Piscataway, New Jersey USA
-
-{\em Postdoctoral Research Associate} \hfill \textbf{September, 2016-Present}
-\vspace*{1mm}
-
-\textbf{Texas A\&M University}, College Station, Texas USA
-%\vspace{1mm}
-
-{\em Research Assistant} \hfill \textbf{August, 2010 - 2016}
-\vspace*{1mm}
-
-\textbf{The University of Tennessee}, Knoxville, Tennessee USA
-%\vspace{1mm}
-
-{\em Research Assistant} \hfill \textbf{August, 2007 - 2009}
-\vspace*{1mm}
-
-\textbf{National Center for Computational Science}, Oak Ridge National Laboratory,
-Oak Ridge, Tennessee USA
-%\vspace*{-4mm}
-
-{\em Visiting Scientist} \hfill \textbf{May, 2007 - August, 2009}\\
-Carried out the computing projects required to complete Master's, including
-modeling of interacting galaxy systems, machine learning, and other HPC tasks. 
+\textbf{The University of Tennessee}, Knoxville, Tennessee USA\newline
+\textit{Master's Candidate} \hfill \textbf{August, 2007 - 2009}\newline
+    \begin{list2}
+    	\vspace*{-5mm}
+      \item Implemented a C-based pipeline to process hundreds of GBs of simulation results. Including a computer vision algorithm to automatically analyze and compare results to expected targets.
+      \item Optimized simulation parameters using a genetic algorithm based search utilizing HPC (100k+ core) systems at the National Center for Computational Science, part of Oak Ridge National Laboratory
+    \end{list2}
 \vspace*{-3mm}
 
 \section{\sc Observing Experience}
 Proposals
     \begin{list2}
         \vspace*{.05in}
-    \item \emph{Proposal Title}\\
+    \item \emph{On the Trail of the Most Massive Galaxy Clusters in the Universe}\\
     Co-I (PI: J. Hughes), KPNO, 3 nights awarded, 2016
+    \item \emph{X-ray Confirmation of Candidate Planck Clusters with Swift}\\
+    Co-I (PI: J. Hughes), Swift X-ray Observatory, 2016
     \item \emph{Measuring the Masses of X-ray-Selected, Low-Mass Galaxy Clusters and Groups with Integral Field Spectroscopy}\\
 		Co-I (PI: N. Mehrtens), McDonald Observatory, 4 nights awarded, 2013
     \item \emph{Measuring the Masses of Galaxy Clusters with Integral Field Spectroscopy}\\
@@ -121,55 +116,57 @@ Telescopes
     \begin{list2}
         \vspace*{.05in}
     \item Harlan J. Smith 2.7m Telescope, Mitchell Spectrograph (formerly VIRUS-P), 20+ nights
+    \item KPNO, Mayall 4m Telescope, MOSAIC3, NEWFIRM, 10+ nights
 	\end{list2}
 Data Experience
     \begin{list2}
         \vspace*{.05in}
+    \item Optical and Near-IR Imagine
 		\item Integral Field Spectroscopy
-    	\item Hubble Space Telescope Imaging
+    \item Hubble Space Telescope Imaging
 		\item Sloan Digital Sky Survey Imaging and Spectroscopy
 	\end{list2}
 
-\section{\sc Computing Experience} 
+\section{\sc Computing Experience}
 Extensive experience in the processing and application of large astronomical data sets, including: the acquisition and reduction of optical integral field unit spectroscopy, querying large astronomical databases such as the Sloan Digital Sky Survey and the Millennium Simulation, analysis of multi-wavelength imaging from the Hubble Space Telescope. Key computing skills include: mastery of the Python language, and the interface with other languages and tools, considerable experience with large multiprocessor applications (e.g. Gadget-2) and high performance computing systems, supervised and unsupervised machine learning and optimization, GPGPU computing, and participation in open source and collaborative development environments, including version control. Contributor to {\sc AstroPy}. Co-author of {\sc astLib} python library, see http://astlib.sourceforge.net
 \vspace*{-3mm}
 
 \section{\sc Teaching and Outreach}
 \textbf{Texas A\&M University}, College Station, Texas USA
-%\vspace{-3mm}
+\vspace{-3mm}
 
 \emph{Teaching Assistant}\hfill \textbf{2010 - Spring, 2015}\\
 Supervised undergraduate students for weekly lab sessions, tutoring sessions, grading of homework and quizzes for Basic Astronomy, Overview of Modern Astronomy, and Survey of Astronomy.
-\vspace*{-1mm}
+\vspace*{-3mm}
 
 \emph{Physics Festival} \hfill \textbf{2010 - Present}\\
 Demonstrated physics and astronomy principles for students from elementary through high school and the general public.
-\vspace*{-1mm}
+\vspace*{-3mm}
 
 \emph{Star Parties} \hfill \textbf{2010 - Present}\\
 Discussed astronomical topics and operated telescopes for college students and the general public.
-\vspace*{3mm}
+%\vspace*{3mm}
 
 %\pagebreak
 \textbf{Nashville State Community College}, Nashville, Tennessee USA
-%\vspace{-3mm}
+\vspace{-3mm}
 
 \emph{Adjunct Faculty} \hfill \textbf{Spring, 2010}\\
 Primary instructor for introductory physics course, Conceptual Physics.
-\vspace*{3mm}
+%\vspace*{3mm}
 
 \textbf{The University of Tennessee}, Knoxville, Tennessee USA
-%\vspace{-3mm}
+\vspace{-3mm}
 
 \emph{Teaching Assistant} \hfill \textbf{August, 2007 - 2009}\\
 Supervised laboratory experiences for undergraduate students in Introduction to Modern Physics, and Electricity and Magnetism for Engineering. Designed and taught laboratories for undergraduate Honors Astronomy.
 \vspace*{-3mm}
 
-\section{\sc Academic Honors and Awards} 
+\section{\sc Academic Honors \\and Awards}
 The University of Tennessee: graduated Magna Cum Laude, Phi Beta Kappa, Sigma
 Pi Sigma, President, Society of Physics Students 2006 thru 2007
 %\vspace*{-1mm}
-\newpage
+
 \section{\sc Grants and Awards}
 \begin{list2}
     \item \emph{The Road to the Virgo Cluster: The DECam/IRAC Galaxy Environment Survey}\\
@@ -188,17 +185,38 @@ Poster: Bashfest Symposium, University of Texas, Austin, TX October, 2013\\
 Talk: CANDELS Team Meeting, University of Kentucky, Lexington, KY August, 2013\\
 Poster: GMT Science Meeting, University of Chicago, Chicago, IL June, 2013\\
 Talk: CANDELS Team Meeting, University of Santa Cruz, Santa Cruz, CA September, 2012\\
-Poster: 219th AAS Meeting, Austin, TX January, 2012\\ 
+Poster: 219th AAS Meeting, Austin, TX January, 2012\\
 Poster: Bashfest Symposium, University of Texas, Austin, TX October, 2011\\
 Talk: Texas A\&M Astronomy Symposium, Texas A\&M University, College Station, TX August, 2011--15\\
 
 \section{\sc References}
 Available upon request.
 
-%\vspace*{-.25in}  
+\section{\sc Publications}
+\begin{list2}
+\item Li, T.~S., DePoy, D.~L., Marshall, J.~L., Tucker, D., Kessler, R., Annis, J.,
+Bernstein, G.~M., \textbf{Boada, S.}, Burke, D.~L., Finley, D.~A., James, D.~J., Kent, S.,
+Lin, H., Marriner, J., Mondrik, N., Nagasawa, D., Rykoff, E.~S., Scolnic, D., Walker, A.~R.,
+Wester, W., Abbott, T.~M.~C., Allam, S., Benoit-L\'evy, A., Bertin, E., Brooks, D., Capozzi,
+D., Carnero Rosell, A., Carrasco Kind, M., Carretero, J., Crocce, M., Cunha, C.~E.,
+D'Andrea, C.~B., da Costa, L.~N., Desai, S., Diehl, H.~T., Doel, P., Flaugher, B., Fosalba,
+P., Frieman, J., Gaztanaga, E., Goldstein, D.~A., Gruen, D., Gruendl, R.~A., Gutierrez, G.,
+Honscheid, K., Kuehn, K., Kuropatkin, N., Maia, M.~A.~G., Melchior, P., Miller, C.~J.,
+Miquel, R., Mohr, J.~J., Neilsen, E., Nichol, R.~C., Nord, B., Ogando, R., Plazas, A.~A.,
+Romer, A.~K., Roodman, A., Sako, M., Sanchez, E., Scarpine, V., Schubnell, M.,
+Sevilla-Noarbe, I., Smith, R.~C., Soares-Santos, M., Sobreira, F., Suchyta, E., Tarle, G.,
+Thomas, D., Vikram, V., and The DES Collaboration \emph{Assessment of Systematic Chromatic
+Errors that Impact Sub-1\% Photometric Precision in Large-Area Sky Surveys} 2016, ArXiv
+1601.00117
+
+\item \textbf{Steven Boada}, Tilvi, V., Papovich, C., Quadri, R. F., Hilton, M., Finkelstein, S., Guo, Y., Bond, N., Conselice, C., Dekel, A., Ferguson, H., Giavalisco, M., Grogin, N. A., Kocevski, D. D., Koekemoer, A. M. and Koo, D. C. \emph{The Role of Bulge Formation in the Homogenization of Stellar Populations at $z\sim2$ as revealed by Internal Color Dispersion in CANDELS} 2015, ApJ, 803, 104
+\end{list2}
+
+\section{\sc Conference Proceedings}
+\begin{list2}
+\item Ting Li, DePoy, D. L., Marshall, Jennifer L., Nagasawa, D. Q., Carona, D. W., {\bf Boada, S.} \emph{Monitoring the atmospheric throughput at Cerro Tololo Inter-American Observatory with aTmCam} 2014, Proceedings of the SPIE, 9147, 91476Z
+\end{list2}
+
+
 \end{resume}
 \end{document}
-
-
-
-
