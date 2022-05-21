@@ -10,3 +10,13 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: boada-cv.tex
+      - name: If success, commit pdf to repo
+        if: success()
+        run: |
+          git config --global user.name 'latex_action'
+          git config --global user.email 'boada@users.noreply.github.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+          echo ready to commit
+          git commit -am "commit compiled pdf"
+          echo ready to push
+          git push
